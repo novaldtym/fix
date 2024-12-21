@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <style>
+        body {
+            font-family:monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://wallpapersok.com/images/thumbnail/y2k-aesthetic-diamonds-and-pearls-ida9by5g4g8rr498.webp);
+        }
+
+        .container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container.active {
+            display: flex;
+        }
+
+        .card {
+            background-color: #F5EFFF;
+            border: 1px solid #ddd;
+            border-radius: 40px;
+            padding: 100px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            margin: 0;
+            font-size: 30px;
+            color: #333;
+        }
+
+        .card h3 {
+            margin: 0;
+            font-size: 45px;
+            color: #A888B5;
+        }
+
+        .card p {
+            font-size: 20px;
+            color: #555;
+        }
+
+
+        .slide {
+            flex: 0 0 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .slider .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .button {
+            margin : 20px;
+            padding: 20px 40px;
+            font-size: 25px;
+            background-color: #8174A0;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #A888B5;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 100%; /* Set a fixed width for the slider box */
+            height: 500px; /* Set a fixed height for the slider box */
+            overflow: hidden; /* Hide overflow outside the slider box */
+            margin: 0 auto; /* Center the slider box */
+            border-radius: 20px;
+            border: 2px solid #A888B5; /* Add border for styling */ 
+        }
+
+        .slider .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%; /* Ensure the slides fill the container */
+        }
+
+        .slider .slide {
+            min-width: 100%; /* Each slide takes the full width of the slider */
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the images fit nicely within the box */
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div id="page1" class="container active">
+        <div class="card">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnp6b3NweDVicnViNHJoNWNtZm9oNDl4bnFyZjIwczlpejVsdDlmMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/I1nwVpCaB4k36/giphy.gif" alt="Birthday GIF">
+            <h2>BUKAA DONGGGGGG !!!!!</h2>
+            <button class="button" onclick="handleChoice(true)">Yes</button>
+            <button class="button" onclick="handleChoice(false)">No</button>
+          
+        </div>
+        
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2" class="container">
+        <div class="card">
+            <h2>HAPPY BIRTHDAY </h2>
+            <h2>MYYY LOVELYY GIRLL </h2>
+            <h3>CHERYL NADYA ANANDA</h3>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="img/1.png" alt="Photo 1"></div>
+                    <div class="slide"><img src="img/2.png" alt="Photo 2"></div>
+                    <div class="slide"><img src="img/3.png" alt="Photo 3"></div>
+                    <div class="slide"><img src="img/4.png" alt="Photo 3"></div>
+                    <div class="slide"><img src="img/5.png" alt="Photo 3"></div>
+                    <div class="slide"><img src="img/6.png" alt="Photo 3"></div>
+                    <div class="slide"><img src="img/7.png" alt="Photo 3"></div>
+                    <div class="slide"><img src="img/8.png" alt="Photo 3"></div>
+                </div>
+            </div>
+            <audio controls>
+                <source src="lagu2.mp3" type="audio/mpeg">
+            </audio>
+            
+            <div class="slider-buttons">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+            <p>Wishing you a day filled with love, joy, and all your favorite things. Have a fantastic year ahead!</p>
+            
+            <button class="button" onclick="goToPage('page3')">Go to greeting cards</button>
+            <button class="button" onclick="exitWebsite('page1')">Exit</button>
+        </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div id="page3" class="container">
+        <div class="card">
+            <h3>surat cinta dariku</h3>
+            <!-- Replace with your GIF URL -->
+            <img src="https://media.giphy.com/media/4e5N7SJFpgO9GaC6PO/giphy.gif?cid=790b76113d6srtzxx58jfktj92feqv5uarfns5gdbwzq9nqj&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Birthday GIF">
+            <p>HAPPY BIRTHDAY SAYANGKUUU. huftt gaa kerasaa udah tuwirr yaaa ciee dah 21. duhh seneng atau sedih yaa inii. untung yaaa di ultah kali ini 
+                adaa yang nemenin, gaa sendiriann wkwkwk. Semogaaa segala hal baik selalu menyertai mu yaaa sayangg, diperlancar segalanya sama ALLAH AMINNN.
+                semogaa bisa lulu cumlaude dan membanggakan ortu, dann semogaaa kitaa akan selalu bersama sampai akhir hayatt nanti AMINNNN. Lovee youuu sayangg and thankyouu 
+                buat waktunyaa selama iniii. IMM Reallyy realyyy lovee uuu. iyaa i knoww mungkin ini terlalu cepat wkwkw namanya jg early birtdayy, krn kamu ga dijogja sihh
+                jadi gabisa ngucapin langsung nihhh, tapi yowes mungkin untuk taun taun selanjutnya bakal kek ginii. again and will never get tired I will always love you baby happy 21 yaaa
+
+            </p>
+            <button class="button" onclick="goToPage('page2')">Back</button>
+        </div>
+    </div>
+    <script>
+
+        function goToPage(pageId) {
+            document.querySelectorAll('.container').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+
+        function handleChoice(choice) {
+            if (choice) {
+                goToPage('page2');
+            } else {
+                alert('HARUSS PENCET YESS YAA GABOLEHH NOO');
+            }
+        }
+
+        function exitWebsite() {
+            alert('MAKASIHH UDAHH BUKAA');
+        }
+
+        let currentSlide = 0;
+
+        function nextSlide() {
+            const slides = document.querySelector('.slider .slides');
+            const totalSlides = slides.children.length;
+            currentSlide = (currentSlide + 1) % totalSlides; // Loop ke slide pertama jika sudah di akhir
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function prevSlide() {
+            const slides = document.querySelector('.slider .slides');
+            const totalSlides = slides.children.length;
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; // Loop ke slide terakhir jika di awal
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        // Otomatis geser setiap 3 detik
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+</html>
